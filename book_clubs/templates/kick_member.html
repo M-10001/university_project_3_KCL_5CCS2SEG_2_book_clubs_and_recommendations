@@ -1,0 +1,15 @@
+{% extends 'base_content.html' %}
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h1>Kick member {{ member_membership.member.username }}</h1>
+      <form action="{% url 'kick_member' member_membership.member.id member_membership.club.id %}" method="post">
+          {% csrf_token %}
+          {% include 'partials/bootstrap_form.html' with form=kick_member_form %}
+          <input type="submit" value="Submit" class="btn btn-primary">
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,139 @@
+[
+  {
+    "model" : "book_clubs.user",
+    "pk" : 1,
+    "fields" : {
+      "username" : "test1",
+      "email" : "test1@example.org",
+      "first_name" : "test1_f",
+      "last_name" : "test1_l",
+      "location" : "test1_lo",
+      "age" : 30,
+      "password" : "pbkdf2_sha256$260000$JHuHOP5nwSyTj7PREYZesC$kDxSaMTnJ7F3ifBVvn148EyFdBcLOP0QOsins3Xb254=",
+      "is_active" : true
+    }
+  },
+
+  {
+    "model" : "book_clubs.club",
+    "pk" : 1,
+    "fields" : {
+      "name" : "test1",
+      "description" : "Random text 123."
+    }
+  },
+
+  {
+    "model" : "book_clubs.membership",
+    "pk" : 1,
+    "fields" : {
+      "club" : 1,
+      "member" : 1,
+      "member_type" : 1
+    }
+  },
+
+  {
+    "model" : "book_clubs.meeting",
+    "pk" : 1,
+    "fields" : {
+      "club" : 1,
+      "book_chooser" : 1,
+      "chosen_book" : null,
+      "active" : true,
+      "deadline" : "2000-01-01T00:00:00+00:00"
+    }
+  },
+
+  {
+    "model" : "book_clubs.user",
+    "pk" : 2,
+    "fields" : {
+      "username" : "test2",
+      "email" : "test2@example.org",
+      "first_name" : "test2_f",
+      "last_name" : "test2_l",
+      "location" : "test2_lo",
+      "age" : 30,
+      "password" : "pbkdf2_sha256$260000$JHuHOP5nwSyTj7PREYZesC$kDxSaMTnJ7F3ifBVvn148EyFdBcLOP0QOsins3Xb254=",
+      "is_active" : true
+    }
+  },
+
+  {
+    "model" : "book_clubs.club",
+    "pk" : 2,
+    "fields" : {
+      "name" : "test2",
+      "description" : "Random text 234."
+    }
+  },
+
+  {
+    "model" : "book_clubs.membership",
+    "pk" : 2,
+    "fields" : {
+      "club" : 2,
+      "member" : 2,
+      "member_type" : 1
+    }
+  },
+
+  {
+    "model" : "book_clubs.meeting",
+    "pk" : 2,
+    "fields" : {
+      "club" : 2,
+      "book_chooser" : 2,
+      "chosen_book" : null,
+      "active" : true,
+      "deadline" : "2000-01-01T00:00:00+00:00"
+    }
+  },
+
+  {
+    "model" : "book_clubs.user",
+    "pk" : 3,
+    "fields" : {
+      "username" : "test3",
+      "email" : "test3@example.org",
+      "first_name" : "test3_f",
+      "last_name" : "test3_l",
+      "location" : "test3_lo",
+      "age" : 30,
+      "password" : "pbkdf2_sha256$260000$JHuHOP5nwSyTj7PREYZesC$kDxSaMTnJ7F3ifBVvn148EyFdBcLOP0QOsins3Xb254=",
+      "is_active" : true
+    }
+  },
+
+  {
+    "model" : "book_clubs.club",
+    "pk" : 3,
+    "fields" : {
+      "name" : "test3",
+      "description" : "Random text 345."
+    }
+  },
+
+  {
+    "model" : "book_clubs.membership",
+    "pk" : 3,
+    "fields" : {
+      "club" : 3,
+      "member" : 3,
+      "member_type" : 1
+    }
+  },
+
+  {
+    "model" : "book_clubs.meeting",
+    "pk" : 3,
+    "fields" : {
+      "club" : 3,
+      "book_chooser" : 3,
+      "chosen_book" : null,
+      "active" : true,
+      "deadline" : "2000-01-01T00:00:00+00:00"
+    }
+  }
+]

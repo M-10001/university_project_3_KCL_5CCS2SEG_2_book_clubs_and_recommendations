@@ -1,0 +1,43 @@
+[
+  {
+    "model" : "book_clubs.book",
+    "pk" : "0000000001",
+    "fields" : {
+      "name" : "test1",
+      "author" : "test1_a",
+      "year_of_publication" : 1,
+      "publisher" : "test1_p",
+      "image_url_s" : null,
+      "image_url_m" : null,
+      "image_url_l" : null
+    }
+  },
+
+  {
+    "model" : "book_clubs.book",
+    "pk" : "0000000002",
+    "fields" : {
+      "name" : "test2",
+      "author" : "test2_a",
+      "year_of_publication" : 2,
+      "publisher" : "test1_p",
+      "image_url_s" : null,
+      "image_url_m" : null,
+      "image_url_l" : null
+    }
+  },
+  
+  {
+    "model" : "book_clubs.book",
+    "pk" : "0000000003",
+    "fields" : {
+      "name" : "test3",
+      "author" : "test3_a",
+      "year_of_publication" : 3,
+      "publisher" : "test1_p",
+      "image_url_s" : null,
+      "image_url_m" : null,
+      "image_url_l" : null
+    }
+  }
+]

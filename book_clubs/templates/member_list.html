@@ -1,0 +1,42 @@
+{% extends 'base_content.html' %}
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h1>Members</h1>
+      {% if membership_list %}
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope = 'col'></th>
+              <th scope = 'col'>Username:</th>
+              {% if membership.is_owner %}
+                <th scope = 'col'></th>
+              {% endif %}
+            </tr>
+          </thead>
+          <tbody>
+            {% for entry in membership_list %}
+              <tr>
+                <th scope = 'row'>
+                  <img src="{{ entry.member.mini_gravatar }}" alt="Gravatar of {{ entry.member.email }}" class="rounded-circle" >
+                </th>
+                <td>{{ entry.member.username }}</td>
+                {% if membership.is_owner %}
+                  {% if not entry.is_owner %}
+                    <td><a class="btn btn-md btn-secondary" href="{% url 'kick_member' entry.member.id entry.club.id %}">Kick</a></td>
+                  {% else %}
+                  <td></td>
+                  {% endif %}
+                {% endif %}
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      {% else %}
+      <p1>Currently no members.</p1>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% endblock %}

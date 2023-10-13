@@ -1,0 +1,33 @@
+{% extends 'base_content.html' %}
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h1>Applicable clubs</h1>
+      <p>You can apply to clubs here.</p>
+      {% if clubs %}
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope = 'col'>ID</th>
+              <th scope = 'col'>Name</th>
+              <th scope = 'col'> </th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for club in clubs %}
+              <tr>
+                <th>{{ club.id }}</th>
+                <td>{{ club.name }}</td>
+                <td><a class="btn btn-md btn-secondary" href="{% url 'apply_to_club' club.id %}">Apply</a></td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      {% else %}
+        <p>There aren't any clubs to be displayed.</p>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% endblock %}

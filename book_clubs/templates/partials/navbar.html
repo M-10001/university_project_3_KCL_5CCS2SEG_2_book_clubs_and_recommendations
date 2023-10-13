@@ -1,0 +1,57 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-3">
+  <div class="container">
+    <a class="navbar-brand" href="{% url 'home' %}">
+      Book Clubs
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    {% if user.is_authenticated %}
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        {% if membership %}
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'club_page' membership.club.id %}">Club page</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'member_list' membership.club.id %}">Members</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'meeting_list' membership.club.id %}">Meetings</a>
+            </li>
+            {% if membership.is_owner %}
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'club_application_list' membership.club.id %}">Applicants</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'shedule_meeting' membership.club.id %}">Shedule a meeting</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'club_edit' membership.club.id %}">Edit club info</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'disband_club' membership.club.id %}">Disband club</a>
+              </li>
+            {% endif %}
+          </ul>
+        {% endif %}
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#" id="user-account-dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <span class="bi-person-circle"></span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="user-account-dropdown">
+              <li><a class="dropdown-item" href="{% url 'create_club' %}">Create a club</a></li>
+              <li><a class="dropdown-item" href="{% url 'applicable_clubs' %}">Apply to a club</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="{% url 'user_club_list' %}">Your clubs</a></li>
+              <li><a class="dropdown-item" href="{% url 'user_application_list' %}">Your applications</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="{% url 'log_out' %}">Log out</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    {% endif %}
+  </div>
+</nav>

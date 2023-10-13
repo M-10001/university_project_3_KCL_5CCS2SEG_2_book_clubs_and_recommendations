@@ -1,0 +1,15 @@
+{% extends 'base_content.html' %}
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h1>Edit Club {{ club.name }} {{ club.id }}</h1>
+      <form action="{% url 'club_edit' club.id %}" method="post">
+        {% csrf_token %}
+        {% include 'partials/bootstrap_form.html' with form=club_form %}
+        <input type="submit" value="Save" class="btn btn-primary">
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

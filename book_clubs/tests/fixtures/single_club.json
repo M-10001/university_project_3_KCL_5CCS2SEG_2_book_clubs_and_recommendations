@@ -1,0 +1,10 @@
+[
+  {
+    "model" : "book_clubs.club",
+    "pk" : 1,
+    "fields" : {
+      "name" : "test1",
+      "description" : "Random text 123."
+    }
+  }
+]

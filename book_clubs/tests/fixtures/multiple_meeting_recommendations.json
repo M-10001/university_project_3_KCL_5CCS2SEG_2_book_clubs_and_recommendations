@@ -1,0 +1,133 @@
+[
+  {
+    "model" : "book_clubs.club",
+    "pk" : 1,
+    "fields" : {
+      "name" : "test1",
+      "description" : "Random text 123."
+    }
+  },
+
+  {
+    "model" : "book_clubs.book",
+    "pk" : "0000000001",
+    "fields" : {
+      "name" : "test1",
+      "author" : "test1_a",
+      "year_of_publication" : 1,
+      "publisher" : "test1_p",
+      "image_url_s" : null,
+      "image_url_m" : null,
+      "image_url_l" : null
+    }
+  },
+
+  {
+    "model" : "book_clubs.meeting",
+    "pk" : 1,
+    "fields" : {
+      "club" : 1,
+      "book_chooser" : null,
+      "chosen_book" : null,
+      "active" : true,
+      "deadline" : "2000-01-01T00:00:00+00:00"
+    }
+  },
+
+  {
+    "model" : "book_clubs.meetingrecommendation",
+    "pk" : 1,
+    "fields" : {
+      "meeting" : 1,
+      "book" : "0000000001"
+    }
+  },
+
+  {
+    "model" : "book_clubs.club",
+    "pk" : 2,
+    "fields" : {
+      "name" : "test2",
+      "description" : "Random text 234."
+    }
+  },
+
+  {
+    "model" : "book_clubs.book",
+    "pk" : "0000000002",
+    "fields" : {
+      "name" : "test2",
+      "author" : "test2_a",
+      "year_of_publication" : 2,
+      "publisher" : "test1_p",
+      "image_url_s" : null,
+      "image_url_m" : null,
+      "image_url_l" : null
+    }
+  },
+
+  {
+    "model" : "book_clubs.meeting",
+    "pk" : 2,
+    "fields" : {
+      "club" : 2,
+      "book_chooser" : null,
+      "chosen_book" : null,
+      "active" : true,
+      "deadline" : "2000-01-01T00:00:00+00:00"
+    }
+  },
+
+  {
+    "model" : "book_clubs.meetingrecommendation",
+    "pk" : 2,
+    "fields" : {
+      "meeting" : 2,
+      "book" : "0000000002"
+    }
+  },
+
+  {
+    "model" : "book_clubs.club",
+    "pk" : 3,
+    "fields" : {
+      "name" : "test3",
+      "description" : "Random text 345."
+    }
+  },
+
+  {
+    "model" : "book_clubs.book",
+    "pk" : "0000000003",
+    "fields" : {
+      "name" : "test3",
+      "author" : "test3_a",
+      "year_of_publication" : 3,
+      "publisher" : "test1_p",
+      "image_url_s" : null,
+      "image_url_m" : null,
+      "image_url_l" : null
+    }
+  },
+
+  {
+    "model" : "book_clubs.meeting",
+    "pk" : 3,
+    "fields" : {
+      "club" : 3,
+      "book_chooser" : null,
+      "chosen_book" : null,
+      "active" : true,
+      "deadline" : "2000-01-01T00:00:00+00:00"
+    }
+  },
+
+  {
+    "model" : "book_clubs.meetingrecommendation",
+    "pk" : 3,
+    "fields" : {
+      "meeting" : 3,
+      "book" : "0000000003"
+    }
+  }
+]

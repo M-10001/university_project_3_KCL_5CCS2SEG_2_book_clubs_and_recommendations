@@ -1,0 +1,35 @@
+[
+  {
+    "model" : "book_clubs.user",
+    "pk" : 1,
+    "fields" : {
+      "username" : "test1",
+      "email" : "test1@example.org",
+      "first_name" : "test1_f",
+      "last_name" : "test1_l",
+      "location" : "test1_lo",
+      "age" : 30,
+      "password" : "pbkdf2_sha256$260000$JHuHOP5nwSyTj7PREYZesC$kDxSaMTnJ7F3ifBVvn148EyFdBcLOP0QOsins3Xb254=",
+      "is_active" : true
+    }
+  },
+
+  {
+    "model" : "book_clubs.club",
+    "pk" : 1,
+    "fields" : {
+      "name" : "test1",
+      "description" : "Random text 123."
+    }
+  },
+
+  {
+    "model" : "book_clubs.membership",
+    "pk" : 1,
+    "fields" : {
+      "club" : 1,
+      "member" : 1,
+      "member_type" : 1
+    }
+  }
+]

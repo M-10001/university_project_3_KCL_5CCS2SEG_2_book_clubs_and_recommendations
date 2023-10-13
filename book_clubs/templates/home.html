@@ -1,0 +1,13 @@
+{% extends 'base_content.html' %}
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+    <h1>Book Clubs</h1>
+    <p>The best app for book clubs</p>
+    <p><a class="btn btn-lg btn-secondary" href='{% url 'sign_up' %}'>Sign up</a></p>
+    <p><a class="btn btn-lg btn-secondary" href='{% url 'log_in' %}'>Log in</a></p>
+    </div>
+  </div>
+</div>
+{% endblock %}

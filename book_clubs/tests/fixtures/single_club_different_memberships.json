@@ -1,0 +1,110 @@
+[
+  {
+    "model" : "book_clubs.club",
+    "pk" : 1,
+    "fields" : {
+      "name" : "test1",
+      "description" : "Random text 123."
+    }
+  },
+  
+  {
+    "model" : "book_clubs.user",
+    "pk" : 1,
+    "fields" : {
+      "username" : "test1",
+      "email" : "test1@example.org",
+      "first_name" : "test1_f",
+      "last_name" : "test1_l",
+      "location" : "test1_lo",
+      "age" : 30,
+      "password" : "pbkdf2_sha256$260000$JHuHOP5nwSyTj7PREYZesC$kDxSaMTnJ7F3ifBVvn148EyFdBcLOP0QOsins3Xb254=",
+      "is_active" : true
+    }
+  },
+
+  {
+    "model" : "book_clubs.membership",
+    "pk" : 1,
+    "fields" : {
+      "club" : 1,
+      "member" : 1,
+      "member_type" : 1
+    }
+  },
+
+  {
+    "model" : "book_clubs.user",
+    "pk" : 2,
+    "fields" : {
+      "username" : "test2",
+      "email" : "test2@example.org",
+      "first_name" : "test2_f",
+      "last_name" : "test2_l",
+      "location" : "test2_lo",
+      "age" : 30,
+      "password" : "pbkdf2_sha256$260000$JHuHOP5nwSyTj7PREYZesC$kDxSaMTnJ7F3ifBVvn148EyFdBcLOP0QOsins3Xb254=",
+      "is_active" : true
+    }
+  },
+
+  {
+    "model" : "book_clubs.membership",
+    "pk" : 2,
+    "fields" : {
+      "club" : 1,
+      "member" : 2,
+      "member_type" : 0
+    }
+  },
+
+  {
+    "model" : "book_clubs.user",
+    "pk" : 3,
+    "fields" : {
+      "username" : "test3",
+      "email" : "test3@example.org",
+      "first_name" : "test3_f",
+      "last_name" : "test3_l",
+      "location" : "test3_lo",
+      "age" : 30,
+      "password" : "pbkdf2_sha256$260000$JHuHOP5nwSyTj7PREYZesC$kDxSaMTnJ7F3ifBVvn148EyFdBcLOP0QOsins3Xb254=",
+      "is_active" : true
+    }
+  },
+
+  {
+    "model" : "book_clubs.membership",
+    "pk" : 3,
+    "fields" : {
+      "club" : 1,
+      "member" : 3,
+      "member_type" : 1
+    }
+  },
+
+  {
+    "model" : "book_clubs.user",
+    "pk" : 4,
+    "fields" : {
+      "username" : "test4",
+      "email" : "test4@example.org",
+      "first_name" : "test4_f",
+      "last_name" : "test4_l",
+      "location" : "test4_lo",
+      "age" : 30,
+      "password" : "pbkdf2_sha256$260000$JHuHOP5nwSyTj7PREYZesC$kDxSaMTnJ7F3ifBVvn148EyFdBcLOP0QOsins3Xb254=",
+      "is_active" : true
+    }
+  },
+
+  {
+    "model" : "book_clubs.membership",
+    "pk" : 4,
+    "fields" : {
+      "club" : 1,
+      "member" : 4,
+      "member_type" : 0
+    }
+  }
+]

@@ -1,0 +1,34 @@
+{% extends 'base_content.html' %}
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h1>Applications</h1>
+      {% if applications %}
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope = 'col'></th>
+              <th scope = 'col'>Username:</th>
+              <th scope = 'col'></th>
+              <th scope = 'col'></th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for application in applications %}
+              <tr>
+                <td><img src="{{ application.applicant.mini_gravatar }}" alt="Gravatar of {{ application.applicant.username }}" class="rounded-circle profile-image" ></td>
+                <td>{{ application.applicant.username }}</td>
+                <td><a class="btn btn-md btn-secondary" href="{% url 'accept_application' application.applicant.id application.club.id %}">Accept</a></td>
+                <td><a class="btn btn-md btn-secondary" href="{% url 'reject_application' application.applicant.id application.club.id %}">Reject</a></td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      {% else %}
+        <p>Curently no applicants.</p>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'base_content.html' %}
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h1>Shedule meeting for {{ membership.club.name }}</h1>
+      <form action="{% url 'shedule_meeting' membership.club.id %}" method="post">
+        {% csrf_token %}
+        {% include 'partials/bootstrap_form.html' with form=meeting_creation_form %}
+        <input type="submit" value="Create" class="btn btn-primary">
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

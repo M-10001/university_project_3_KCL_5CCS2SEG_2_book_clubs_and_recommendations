@@ -1,0 +1,44 @@
+{% extends 'base_content.html' %}
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h1>Welcome to {{ club.name }}</h1>
+      {% if club.description %}
+        <p1>Description: {{ club.description }}</p1>
+      {% endif %}
+      {% if owner_memberships %}
+        <br></br>
+        <h3>Club owner(s):</h3>
+        {% for owner_membership in owner_memberships %}
+          <img src="{{ owner_membership.member.gravatar }}" alt="Gravatar of {{ owner_membership.member.username }}" class="rounded-circle profile-image" >
+          <h5>Username:</h5>
+          <h5 class="profile-title">{{ owner_membership.member.username }}</h5>
+        {% endfor %}
+      {% endif %}
+      {% if meetings_to_choose_books_for %}
+        <br></br>
+        <div class = "col-3">
+          <h3>Select books for upcoming meetings</h3>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope = 'col'>ID:</th>
+                <th scope = 'col'></th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for entry in meetings_to_choose_books_for %}
+                <tr>
+                  <th scope = 'row'>{{ entry.id }}</th>
+                  <td><a class="btn btn-md btn-secondary" href="{% url 'meeting_book_selection' entry.club.id entry.id 0 %}">Select for</a></td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% endblock %}

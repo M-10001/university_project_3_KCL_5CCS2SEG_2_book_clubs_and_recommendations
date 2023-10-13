@@ -1,0 +1,30 @@
+{% extends 'base_content.html' %}
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h1>Clubs Applied To</h1>
+      {% if applications %}
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope = 'col'>ID:</th>
+              <th scope = 'col'>Name:</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for application in applications %}
+              <tr>
+                <th>{{ application.club.id }}</th>
+                <td>{{ application.club.name }}</td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      {% else %}
+        <p1>You have not applied to join a club yet.</p1>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% endblock %}

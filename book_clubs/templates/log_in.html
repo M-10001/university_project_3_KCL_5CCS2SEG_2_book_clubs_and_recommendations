@@ -1,0 +1,17 @@
+{% extends 'base_content.html' %}
+{% block content %}
+<div class="container">
+  <div class="row">
+      <div class="col-12">
+        <h1>Log in</h1>
+        <p>PLease log in here!</p>
+        <form action="{% url 'log_in' %}" method="post">
+          {% csrf_token %}
+          <input type = 'hidden' name = 'next' value = '{{ next }}'>
+          {% include 'partials/bootstrap_form.html' with form=log_in_form %}
+          <input type="submit" value="Log in" class="btn btn-primary">
+        </form>
+      </div>
+  </div>
+</div>
+{% endblock %}
