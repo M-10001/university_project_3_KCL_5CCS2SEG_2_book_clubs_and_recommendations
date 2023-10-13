@@ -45,7 +45,7 @@ Note: users may be seeded starting from higher numbers if other users exist befo
 
 3.8 preferrably 3.8.10 (surprise library may not work on a higher version like python 3.10 or lower versions as well).
 
-Note: For the all information below, ensure you are using the local command line in a python enviroment inside the "source_code" directory.
+Note: For the all information below, ensure you are using the local command line in a python enviroment inside the current directory.
 
 ### Installation steps:
 
@@ -65,7 +65,7 @@ Call "python manage.py test".
 
 ### Accessing HTML report of coverage tool:
 
-Do not need python environment, just need to be inside current directory folder using local command line.
+Do not need python environment, just need to be inside current directory using local command line.
 
 Call "your_brower htmlcov/index.html".
 
